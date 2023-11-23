@@ -1,0 +1,395 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+/*
+.profile{
+
+}
+.profile .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.profile h1{
+    font-weight: normal;
+}*/
+.header {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header .container::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 30px);
+    left: 15px;
+    height: 1px;
+    background-color: #B4C7E7;
+    z-index: -1;
+}
+
+.header .logo img {
+    width: 100px;
+}
+
+.header .links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .links ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .links ul li a {
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    position: relative;
+
+}
+
+.header .links ul li a::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #2e75b7;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.header .links ul li a:hover::after {
+    display: block;
+}
+
+.header .container .links i {
+    display: none;
+}
+
+@media (max-width:767px) {
+    .header .container .links ul {
+        display: none;
+        position: relative;
+    }
+
+    .header .container .links i:hover+ul {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .header .container .links i {
+        color: white;
+        font-size: 30px;
+        display: block;
+    }
+
+    .header .container .links i:hover+ul li a {
+        color: #19c8fa;
+        padding: 20px 15px;
+    }
+}
+
+@media (min-width:768px) {
+    .header .container .links ul i {
+        display: block;
+    }
+}
+
+.landing {
+    background-color: #98c0e058;
+    height: 100vh;
+    background-image: url(../images/lan.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.landing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0 0 0 / 60%);
+    width: 100%;
+    height: 100%;
+
+}
+
+.landing .info {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+    justify-content: space-around;
+    width: 100%;
+    background-color: #b4c7e780;
+}
+
+.landing .info .photo img {
+    width: 300px;
+
+    height: 100%;
+}
+
+.landing .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.landing .text h2 {
+    font-size: 38px;
+    font-weight: normal;
+    color: white;
+}
+
+.landing .text span {
+    color: #b3daf7;
+}
+
+.landing .text p {
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 3;
+    color: white
+}
+
+.landing .text .button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 8px;
+    border: 1px solid #2068A1;
+    border-radius: 12px;
+    background-color: #2068A1;
+}
+
+.landing .text .button a {
+    color: white;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+@media (max-width:767px) {
+    .landing .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .landing .info .photo img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+
+    .landing .info .text {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.degree {
+    margin-top: 100px;
+
+}
+
+.main-heading {
+    text-align: center;
+    padding: 0 30px
+}
+
+.main-heading h2 {
+    font-size: 45px;
+    font-weight: normal;
+    color: #aaaaaa98;
+    width: fit-content;
+    padding: 0 20px;
+    border-left: 2px solid #aaaaaa98;
+    border-right: 2px solid #aaaaaa98;
+    margin: 0 auto;
+    position: relative;
+}
+
+.degree .container .content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    align-items: center;
+    height: 100%;
+}
+
+.degree .container .content img {
+    width: 308px;
+    border-radius: 20px;
+
+}
+
+.degree .container .content .text {
+    width: 400px;
+    max-width: 100%;
+}
+
+.degree .container .content .text p {
+
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #2068A1;
+    line-height: 2;
+}
+
+@media (max-width:767px) {
+    .degree .container .content {
+        flex-direction: column;
+
+    }
+
+    .degree .container .content img {
+        width: 250px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .degree .container .content .text p {
+        text-align: center;
+    }
+}
+
+.experiances {
+    margin: 100px 0;
+    position: relative;
+}
+
+.experiances  .content {
+    background-image: url(../images/how-to-use-animation-for-online-courses\ \(1\).png);
+    background-size: cover;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit , minmax(400px ,1fr));
+    position: relative;
+    padding: 0 15px;
+    margin: 100px auto 0;
+
+}
+.experiances  .content::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    background-color: rgba(0 0 0 / 60%);
+}
+.experiances .content .text {
+    z-index: 1;
+    color: white;
+}
+
+.experiances .content .text p {
+    font-size: 18px;
+    margin: 40px 0;
+}
+
+.experiances .content .text ul li {
+    margin-bottom: 30px;
+}
+.footer{
+    margin-top: 100px;
+    background-color: #2068A1;
+    color:  white;
+    height:100px;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 65px;
+}
+.footer .container ul{
+    display: flex;
+}
+.footer .container ul li{
+    padding: 12px;
+}
+.footer .container ul li i{
+
+}
+.footer .container .button a{
+    color: white;
+    background-color: #03a9f46e;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.footer .container .email{
+    font-size: 18px;
+}
+.footer .cpy p{
+    text-align: center;
+    margin-top: 10px;
+}
